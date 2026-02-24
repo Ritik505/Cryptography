@@ -1,0 +1,11 @@
+plaintext = str(input("Enter a word: "))
+key = int(input("Enter a Key: "))
+result = ""
+
+for ch in plaintext:
+    position = ord(ch) - ord('A')
+    NewPosition = (position + key) % 26
+    encrypted_char = chr(NewPosition + ord('A'))
+    result += encrypted_char
+
+print("Encrypted Date: ",result)
