@@ -1,0 +1,27 @@
+choice = input("Enter E for Encryption or D for Decryption: ")
+
+text = str(input("Enter the word: "))
+key = int(input("Enter the Key: "))
+
+result = ""
+
+for ch in text:
+    position = ord(ch) - ord('A')
+
+    if choice == 'E' or choice == 'e':
+        new_position = (position + key) % 26
+        result += chr(new_position + ord('A'))
+
+    elif choice == 'D' or choice == 'd':
+        new_position = (position - key) % 26
+        result += chr(new_position + ord('A'))
+
+    else:
+        print("Invalid choice")
+        break
+
+if choice == 'E' or choice == 'e':
+    print("Encrypted Data:", result)
+
+elif choice == 'D' or choice == 'd':
+    print("Decrypted Data:", result)
