@@ -1,0 +1,13 @@
+blocked_ips = ["192.168.1.10", "10.0.0.5"]
+
+def firewall(ip):
+    if ip in blocked_ips:
+        print("Access Denied")
+    else:
+        print("Access Allowed")
+
+
+ip = input("Enter IP address: ")
+
+
+firewall(ip)
