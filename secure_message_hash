@@ -1,0 +1,12 @@
+# SHA-256 Hashing Example using Python hashlib
+# Demonstrates how message integrity can be verified using hashing
+
+import hashlib
+
+message = "Secure Email Message"
+
+# create hash
+hash_value = hashlib.sha256(message.encode()).hexdigest()
+
+print("Message:", message)
+print("Hash:", hash_value)
